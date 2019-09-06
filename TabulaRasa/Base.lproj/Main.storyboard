@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GameVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameVC" customModule="TabulaRasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R9R-TI-v9f">
+                                <rect key="frame" x="0.0" y="246" width="414" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R9R-TI-v9f" secondAttribute="height" multiplier="1:1" id="w8u-Xk-HzO"/>
+                                </constraints>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="BWu-Aw-arV">
+                                    <rect key="frame" x="0.0" y="95" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trCell" rowHeight="67" id="nf0-em-hjs" customClass="TRCell" customModule="TabulaRasa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nf0-em-hjs" id="iRh-tx-fio">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Amw-4v-per">
+                                                    <rect key="frame" x="39.5" y="0.0" width="335" height="67"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-Ga-cLM" customClass="TRButton" customModule="TabulaRasa" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="EvM-Ga-cLM" secondAttribute="height" multiplier="1:1" id="cT7-7e-8d1"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="trButtonTapped:" destination="nf0-em-hjs" eventType="touchUpInside" id="61i-AU-gPS"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhH-iy-Iuc" customClass="TRButton" customModule="TabulaRasa" customModuleProvider="target">
+                                                            <rect key="frame" x="67" y="0.0" width="67" height="67"/>
+                                                            <connections>
+                                                                <action selector="trButtonTapped:" destination="nf0-em-hjs" eventType="touchUpInside" id="a4b-jE-GtL"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53x-jM-nGg" customClass="TRButton" customModule="TabulaRasa" customModuleProvider="target">
+                                                            <rect key="frame" x="134" y="0.0" width="67" height="67"/>
+                                                            <connections>
+                                                                <action selector="trButtonTapped:" destination="nf0-em-hjs" eventType="touchUpInside" id="2Nh-q7-cgh"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uz-I6-2bW" customClass="TRButton" customModule="TabulaRasa" customModuleProvider="target">
+                                                            <rect key="frame" x="201" y="0.0" width="67" height="67"/>
+                                                            <connections>
+                                                                <action selector="trButtonTapped:" destination="nf0-em-hjs" eventType="touchUpInside" id="86q-lm-8au"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGf-cK-qfN" customClass="TRButton" customModule="TabulaRasa" customModuleProvider="target">
+                                                            <rect key="frame" x="268" y="0.0" width="67" height="67"/>
+                                                            <connections>
+                                                                <action selector="trButtonTapped:" destination="nf0-em-hjs" eventType="touchUpInside" id="Qel-yC-tdv"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Amw-4v-per" firstAttribute="centerX" secondItem="iRh-tx-fio" secondAttribute="centerX" id="Jlf-IJ-o39"/>
+                                                <constraint firstAttribute="bottom" secondItem="Amw-4v-per" secondAttribute="bottom" id="eqn-Pt-zmh"/>
+                                                <constraint firstItem="Amw-4v-per" firstAttribute="top" secondItem="iRh-tx-fio" secondAttribute="top" id="hoQ-dF-y3x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button0" destination="EvM-Ga-cLM" id="aDH-l6-JBk"/>
+                                            <outlet property="button1" destination="IhH-iy-Iuc" id="I08-94-TC4"/>
+                                            <outlet property="button2" destination="53x-jM-nGg" id="Bmp-uN-O5R"/>
+                                            <outlet property="button3" destination="5Uz-I6-2bW" id="Tey-tZ-ZJf"/>
+                                            <outlet property="button4" destination="hGf-cK-qfN" id="vN8-EJ-iyL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tabula Rasa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cce-SH-i42">
+                                <rect key="frame" x="0.0" y="44" width="414" height="202"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCQ-Ml-SWJ">
+                                <rect key="frame" x="0.0" y="660" width="414" height="28"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgV-IQ-OGh">
+                                <rect key="frame" x="342" y="50" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="helpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXN-m9-gpD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjY-Sr-ceg">
+                                <rect key="frame" x="50" y="40.5" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="↻"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQb-WE-Dqf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cce-SH-i42" secondAttribute="trailing" id="1d9-E6-lyx"/>
+                            <constraint firstItem="WjY-Sr-ceg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6t8-cp-syh"/>
+                            <constraint firstItem="zCQ-Ml-SWJ" firstAttribute="top" secondItem="R9R-TI-v9f" secondAttribute="bottom" id="85U-N2-J9g"/>
+                            <constraint firstItem="WjY-Sr-ceg" firstAttribute="centerY" secondItem="TgV-IQ-OGh" secondAttribute="centerY" id="8VI-Ge-Iy6"/>
+                            <constraint firstItem="zCQ-Ml-SWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hb2-fd-iZn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCQ-Ml-SWJ" secondAttribute="trailing" id="TqO-hk-ahX"/>
+                            <constraint firstItem="TgV-IQ-OGh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="Ty7-e8-RhZ"/>
+                            <constraint firstItem="R9R-TI-v9f" firstAttribute="top" secondItem="cce-SH-i42" secondAttribute="bottom" id="XDF-0x-jKW"/>
+                            <constraint firstItem="cce-SH-i42" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zm7-Ka-z56"/>
+                            <constraint firstItem="R9R-TI-v9f" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aq7-I5-eQC"/>
+                            <constraint firstItem="R9R-TI-v9f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hDt-uV-yKH"/>
+                            <constraint firstItem="R9R-TI-v9f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="m7w-72-5qz"/>
+                            <constraint firstItem="cce-SH-i42" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mC7-0m-dmq"/>
+                            <constraint firstAttribute="trailing" secondItem="TgV-IQ-OGh" secondAttribute="trailing" constant="50" id="sZg-QK-boR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="zCQ-Ml-SWJ" id="evH-OP-WDl"/>
+                        <outlet property="titleLabel" destination="cce-SH-i42" id="FIq-SS-H1O"/>
+                        <outlet property="trTableView" destination="R9R-TI-v9f" id="ISr-Hn-tN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--HelpVC-->
+        <scene sceneID="74l-mw-kUY">
+            <objects>
+                <viewController storyboardIdentifier="helpVC" id="Hka-g9-swM" customClass="HelpVC" customModule="TabulaRasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnP-Ta-gqg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap blocks to flip them between OFF and ON." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2w-ek-31C">
+                                <rect key="frame" x="41.5" y="44" width="331" height="179"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victory is achieved when all blocks are OFF and the board is a clean slate." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96v-UW-Kg9">
+                                <rect key="frame" x="41.5" y="223" width="331" height="40"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bod-jW-fDr">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="806.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Good luck!"/>
+                                <connections>
+                                    <action selector="closeButtonTapped" destination="Hka-g9-swM" eventType="touchUpInside" id="e48-2a-435"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q2w-ek-31C" firstAttribute="height" secondItem="qnP-Ta-gqg" secondAttribute="height" multiplier="0.2" id="1AE-Dp-VdO"/>
+                            <constraint firstItem="96v-UW-Kg9" firstAttribute="width" secondItem="qnP-Ta-gqg" secondAttribute="width" multiplier="0.8" id="2ZG-cc-DHb"/>
+                            <constraint firstItem="96v-UW-Kg9" firstAttribute="centerX" secondItem="aPc-hm-ljW" secondAttribute="centerX" id="Acz-V0-Qw1"/>
+                            <constraint firstItem="96v-UW-Kg9" firstAttribute="top" secondItem="q2w-ek-31C" secondAttribute="bottom" id="CRh-Di-r0W"/>
+                            <constraint firstItem="Bod-jW-fDr" firstAttribute="leading" secondItem="aPc-hm-ljW" secondAttribute="leading" id="IHY-bE-dv7"/>
+                            <constraint firstItem="q2w-ek-31C" firstAttribute="top" secondItem="aPc-hm-ljW" secondAttribute="top" id="TGF-nR-BAT"/>
+                            <constraint firstItem="aPc-hm-ljW" firstAttribute="trailing" secondItem="Bod-jW-fDr" secondAttribute="trailing" id="VWF-MQ-Q7f"/>
+                            <constraint firstItem="q2w-ek-31C" firstAttribute="centerX" secondItem="aPc-hm-ljW" secondAttribute="centerX" id="c8S-xV-0ik"/>
+                            <constraint firstItem="q2w-ek-31C" firstAttribute="width" secondItem="qnP-Ta-gqg" secondAttribute="width" multiplier="0.8" id="pLL-jK-Rdq"/>
+                            <constraint firstItem="Bod-jW-fDr" firstAttribute="height" secondItem="qnP-Ta-gqg" secondAttribute="height" multiplier="0.9" id="rys-U3-ZAU"/>
+                            <constraint firstItem="aPc-hm-ljW" firstAttribute="bottom" secondItem="Bod-jW-fDr" secondAttribute="bottom" id="xpP-bo-ZgK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aPc-hm-ljW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPH-ys-LnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="138"/>
+        </scene>
+    </scenes>
+</document>
