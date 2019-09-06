@@ -93,8 +93,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tabula Rasa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cce-SH-i42">
-                                <rect key="frame" x="0.0" y="44" width="414" height="202"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tabula Rasa" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cce-SH-i42">
+                                <rect key="frame" x="0.0" y="190" width="414" height="56"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -136,7 +136,6 @@
                             <constraint firstItem="R9R-TI-v9f" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aq7-I5-eQC"/>
                             <constraint firstItem="R9R-TI-v9f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hDt-uV-yKH"/>
                             <constraint firstItem="R9R-TI-v9f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="m7w-72-5qz"/>
-                            <constraint firstItem="cce-SH-i42" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mC7-0m-dmq"/>
                             <constraint firstAttribute="trailing" secondItem="TgV-IQ-OGh" secondAttribute="trailing" constant="50" id="sZg-QK-boR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -172,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bod-jW-fDr">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="806.5"/>
+                                <rect key="frame" x="0.0" y="-34" width="414" height="896"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Good luck!"/>
@@ -192,7 +191,7 @@
                             <constraint firstItem="aPc-hm-ljW" firstAttribute="trailing" secondItem="Bod-jW-fDr" secondAttribute="trailing" id="VWF-MQ-Q7f"/>
                             <constraint firstItem="q2w-ek-31C" firstAttribute="centerX" secondItem="aPc-hm-ljW" secondAttribute="centerX" id="c8S-xV-0ik"/>
                             <constraint firstItem="q2w-ek-31C" firstAttribute="width" secondItem="qnP-Ta-gqg" secondAttribute="width" multiplier="0.8" id="pLL-jK-Rdq"/>
-                            <constraint firstItem="Bod-jW-fDr" firstAttribute="height" secondItem="qnP-Ta-gqg" secondAttribute="height" multiplier="0.9" id="rys-U3-ZAU"/>
+                            <constraint firstItem="Bod-jW-fDr" firstAttribute="height" secondItem="qnP-Ta-gqg" secondAttribute="height" id="rys-U3-ZAU"/>
                             <constraint firstItem="aPc-hm-ljW" firstAttribute="bottom" secondItem="Bod-jW-fDr" secondAttribute="bottom" id="xpP-bo-ZgK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aPc-hm-ljW"/>
