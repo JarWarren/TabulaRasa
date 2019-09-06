@@ -8,11 +8,17 @@
 
 import UIKit
 
+/// The ViewController where all gameplay takes place.
 class GameVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TRCellDelegate {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var trTableView: UITableView!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    // MARK: - Properties
+    
     let gc = GameplayController()
     var score = 0 {
         didSet {
@@ -20,11 +26,15 @@ class GameVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TRCe
         }
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         trTableView.delegate = self
         trTableView.dataSource = self
     }
+    
+    // MARK: - Table View Delegate and Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -36,6 +46,8 @@ class GameVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TRCe
         cell.updateCell(index: indexPath.row, buttonStatuses: gc.board[indexPath.row], levelNumber: gc.currentLevel)
         return cell
     }
+    
+    // MARK: - TRCell Delegate
     
     func trCellButtonTapped(at coordinates: (Int, Int)) {
         if gc.isVictorious {
@@ -55,6 +67,8 @@ class GameVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TRCe
         }
     }
     
+    // MARK: - Custom Methods
+    
     func endGame() {
         trTableView.isUserInteractionEnabled = false
         UIView.animate(withDuration: 1) {
@@ -63,6 +77,8 @@ class GameVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TRCe
             self.titleLabel.text = Constants.congratulations
         }
     }
+    
+    // MARK: - Actions
     
     @IBAction func resetButtonTapped(_ sender: Any) {
         gc.restartCurrentLevel()

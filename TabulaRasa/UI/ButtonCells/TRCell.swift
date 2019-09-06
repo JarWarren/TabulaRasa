@@ -8,17 +8,24 @@
 
 import UIKit
 
+/// One of 5 horizontal rows on the game board. Manages the ON/OFF status of its 5 tiles.
 class TRCell: UITableViewCell {
 
-    weak var delegate: TRCellDelegate?
-    var cellIndex = 0
-    var currentLevel = 0
+    // MARK: - Outlets
     
     @IBOutlet weak var button0: TRButton!
     @IBOutlet weak var button1: TRButton!
     @IBOutlet weak var button2: TRButton!
     @IBOutlet weak var button3: TRButton!
     @IBOutlet weak var button4: TRButton!
+    
+    // MARK: - Properties
+    
+    weak var delegate: TRCellDelegate?
+    var cellIndex = 0 // cell's horizontal position in the tableview. 0-4
+    var currentLevel = 0 // level the player is currently on
+    
+    // MARK: - Custom Methods
     
     func updateCell(index: Int, buttonStatuses: [Bool], levelNumber: Int) {
         cellIndex = index
@@ -41,6 +48,8 @@ class TRCell: UITableViewCell {
         button4.gameColor = gameColor
         button4.isFlipped = buttonStatuses[4]
     }
+    
+    // MARK: - Actions
     
     @IBAction func trButtonTapped(_ sender: UIButton) {
         delegate?.trCellButtonTapped(at: (cellIndex, sender.tag))

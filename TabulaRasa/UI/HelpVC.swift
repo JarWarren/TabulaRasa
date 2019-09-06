@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Presents instructions on how to play the game.
 class HelpVC: UIViewController {
 
     @IBAction func closeButtonTapped() {
