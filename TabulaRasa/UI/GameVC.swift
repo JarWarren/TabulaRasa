@@ -52,10 +52,13 @@ class GameVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TRCe
     func trCellButtonTapped(at coordinates: (Int, Int)) {
         if gc.isVictorious {
             if gc.isFinalLevel {
+                self.titleLabel.textColor = .white
                 self.endGame()
             } else {
                 gc.startNextLevel()
                 titleLabel.text = Constants.tabulaRasa
+                titleLabel.textColor = Constants.colors[gc.currentLevel]
+                scoreLabel.textColor = Constants.colors[gc.currentLevel]
                 score = 0
                 trTableView.reloadData()
             }
